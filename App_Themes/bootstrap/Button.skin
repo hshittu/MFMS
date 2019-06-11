@@ -1,0 +1,4 @@
+﻿<asp:Button CssClass="btn btn-primary"  runat="server" />
+<asp:Button CssClass="btn btn-danger" SkinID="DangerButton"  runat="server" />
+<asp:Button CssClass="btn btn-warning" SkinID="EditButton"  runat="server" />
+<asp:Button CssClass="btn btn-success" SkinID="SearchButton"  runat="server" />

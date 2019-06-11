@@ -1,0 +1,157 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Frontend.master.cs" Inherits="Masterpages_Frontend" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <br />
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="~/Scripts/jquery-1.7.2.min.js" />
+                
+            </Scripts>
+        </asp:ScriptManager>
+    <div id="Pagewrapper" >
+        <header><a href="/"></a></header>
+        <nav class="navbar transparent navbar-inverse navbar-fixed-top">
+            <%--StaticMenuStyle-CssClass= "nav"--%>
+            <div class="container">
+            <%--<asp:Menu ID="Menu1" CssClass="MainMenu" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"></asp:Menu>--%>
+            <asp:Menu ID="Menu1" Orientation="Horizontal" float="right"  DataSourceID="SiteMapDataSource1" runat="server" EnableViewState="False" 
+           CssClass="avbar navbar-fixed-top"
+          IncludeStyleBlock="False"
+        
+          
+         StaticSubMenuIndent="16px">
+<DynamicMenuStyle CssClass="dropdown-menu"></DynamicMenuStyle>
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Patients/Default.aspx" Text="Patients" Value="Patients">
+                        <asp:MenuItem NavigateUrl="~/Patients/PatientRegistration.aspx" Text="Registration" Value="Registration"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Patients/EditPatient.aspx" Text="Edit" Value="Edit"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Patients/SearchPatients.aspx" Text="Search" Value="Search"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Patients/PatientPhotoUpload.aspx" Text="Upload Photo" Value="Upload Photo"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Patients/RBview.aspx" Text="RB View" ToolTip="Report Builder View" Value="RB View"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Rooms" Value="Rooms" NavigateUrl="~/Rooms/Default.aspx">
+                        <asp:MenuItem NavigateUrl="~/Rooms/AllocateRoom.aspx" Text="Allocate" Value="Allocate"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Rooms/AddRoom.aspx" Text="Add " Value="Add "></asp:MenuItem>
+                        <asp:MenuItem Text="Edit" Value="Edit" NavigateUrl="~/Rooms/EditRoom.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Rooms/RBview.aspx" Text="RB View" Value="RB View"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Appointments" Value="Appointments" NavigateUrl="~/Appointments/Default.aspx">
+                        <asp:MenuItem NavigateUrl="~/Appointments/CreateAppointment.aspx" Text="Create" Value="Create"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Appointments/ViewAppointment.aspx" Text="View" Value="View"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Appointments/EditAppointment.aspx" Text="Edit" Value="Edit"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Appointments/RBview.aspx" Text="RB View" Value="RB View"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Visits" Value="Visits" NavigateUrl="~/Visits/Default.aspx">
+                        <asp:MenuItem NavigateUrl="~/Visits/VisitRegistration.aspx" Text="Register" Value="Register"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Visits/EditVisit.aspx" Text="Edit" Value="Edit"></asp:MenuItem>
+                        <asp:MenuItem Text="Visit Prescription" Value="Visit Prescription" NavigateUrl="~/Visits/VisitPrescription.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="View Prescription" Value="View Prescription" NavigateUrl="~/Visits/ViewPrescription.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Visits/RBview.aspx" Text="RBview" Value="RBview"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Billings" Value="Billings" NavigateUrl="~/Billing/Default.aspx">
+                        <asp:MenuItem Text="In-Patient" Value="In-Patient" NavigateUrl="~/Billing/InPatientBilling.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Out-Patient" Value="Out-Patient" NavigateUrl="~/Billing/OutPatientBilling.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Billing/ExportOutBills.aspx" Text="Export OutBills" Value="Export OutBills"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Pharmacy" Value="Pharmacy">
+                        <asp:MenuItem NavigateUrl="~/Pharmacy/AddMedicine.aspx" Text="Add Medicine" Value="Add Medicine"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Pharmacy/AddToStock.aspx" Text="Add To Stock" Value="Add To Stock"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Pharmacy/RemoveStock.aspx" Text="Remove Stock" Value="Remove Stock"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Pharmacy/Inventory.aspx" Text="View Inventory" Value="View Inventory"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Add Staff" Value="Add Staff">
+                        <asp:MenuItem NavigateUrl="~/Staff/DoctorRegistration.aspx" Text="Add Doctor" Value="Add Doctor"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Staff/NurseRegistration.aspx" Text="Add Nurse" Value="Add Nurse"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Staff/PharmacistReg.aspx" Text="Add Pharmacist" Value="Add Pharmacist"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Staff/ReceptionistReg.aspx" Text="Add Receptionist" Value="Add Receptionist"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Edit Staff" Value="Edit Staff">
+                        <asp:MenuItem NavigateUrl="~/Staff/EditDoctor.aspx" Text="Edit Doctor" Value="Edit Doctor"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Staff/EditNurse.aspx" Text="Edit Nurse" Value="Edit Nurse"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Staff/EditReceptionist.aspx" Text="Edit Receptionist" Value="Edit Receptionist"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Staff/EditPharmacist.aspx" Text="Edit Pharmacist" Value="Edit Pharmacist"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Search Staff" Value="Search Staff">
+                        <asp:MenuItem Text="Search Doctor" Value="Search Doctor" NavigateUrl="~/Staff/SearchDoctor.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Search Nurse" Value="Search Nurse" NavigateUrl="~/Staff/SearchNurse.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Search Receptionist" Value="Search Receptionist" NavigateUrl="~/Staff/SearchReceptionist.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Search Pharmacist" Value="Search Pharmacist" NavigateUrl="~/Staff/SearchPharmacist.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Delete Staff" Value="Delete Staff">
+                        <asp:MenuItem Text="Delete Doctor" Value="Delete Doctor" NavigateUrl="~/Staff/DeleteDoctor.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Delete Nurse" Value="Delete Nurse" NavigateUrl="~/Staff/DeleteNurse.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Delete Receptionist" Value="Delete Receptionist" NavigateUrl="~/Staff/DeleteReceptionist.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Delete Pharmacist" Value="Delete Pharmacist" NavigateUrl="~/Staff/DeletePharmacist.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="View Staff" Value="View Staff">
+                        <asp:MenuItem NavigateUrl="~/Staff/AllDoctors.aspx" Text="View Doctor" Value="View Doctor"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Staff/AllNurses.aspx" Text="View Nurse" Value="View Nurse"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Staff/AllReceptionists.aspx" Text="View Receptionists" Value="View Receptionists"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Staff/AllPharmacists.aspx" Text="View Pharmacists" Value="View Pharmacists"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Login" Value="Login" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                </Items>
+
+<StaticMenuStyle CssClass="nav"></StaticMenuStyle>
+
+<StaticSelectedStyle CssClass="active"></StaticSelectedStyle>
+            </asp:Menu>
+  <ul class="nav navbar-nav dropdown navbar-right">
+      <a href="../Profile.aspx"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" ><asp:LoginName ID="LoginName1" runat="server" FormatString="<h3>{0}<h3>"/></a>
+      
+      </ul>
+                     </div>
+                 </nav>
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+               <br /><br /><br />
+        <div class="Back">
+        <section class="container body-content">
+           <%-- <script>
+                //Array of images which you want to show: Use path you want.
+                var images = new Array('Back2.jpg', 'Back3.jpg');
+                var nextimage = 0;
+                doSlideshow();
+
+                function doSlideshow() {
+                    if (nextimage >= images.length) { nextimage = 0; }
+                    $('.Back').append
+                    .css('background-image', 'url(' + images[nextimage++] + ')')
+                    .fadeIn(500, function () {
+                        setTimeout(doSlideshow, 1000);
+                    });
+                }
+</script>--%>
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server"  PathSeparator=" > " 
+        ParentLevelsDisplayed="1" 
+        PathDirection="RootToCurrent" 
+        RenderCurrentNodeAsLink="false" 
+        ShowToolTips="true"
+        CssClass="breadcrumb"></asp:SiteMapPath><br /><br />
+            <div class="jumbotron">
+            <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+            </asp:ContentPlaceHolder>
+                
+                </div>
+        </section>
+            </div>
+            </div>
+    </form>
+    <footer class="footer">
+        <h1>MFMS</h1>
+        <div class="cont">
+      Shittu Ayodeji Hammed &copy
+            </div>
+    </footer>
+</body>
+</html>

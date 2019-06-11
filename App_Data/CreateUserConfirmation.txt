@@ -1,0 +1,7 @@
+﻿Hi <% UserName %>,
+Thank you for joining MFMS
+To use the application, use the following details:
+User name: <% UserName %>
+Your password: <% Password %>
+We look forward to your contributions.
+The MFMS Team

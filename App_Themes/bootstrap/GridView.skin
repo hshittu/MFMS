@@ -1,0 +1,1 @@
+﻿<asp:GridView CssClass="table table-hover table-striped" runat="server"/>

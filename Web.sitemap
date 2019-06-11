@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/" title="Home"  description="Home">
+    <siteMapNode url="~/Default.aspx" title="Home"  description="Go to Homepage" />
+    <siteMapNode url="~/Patients/Default.aspx" title="Patients"
+description="Patients Registered to the Hospital">
+      <siteMapNode url="~/Patients/PatientRegistration.aspx" title="Add"
+                   description="Registration of patient" />
+      <siteMapNode url="~/Patients/EditPatient.aspx" title="Edit"
+     description="Edit Patient Records"  />
+     <siteMapNode url="~/Patients/SearchPatients.aspx" title="Search"
+     description="Search Patient Records"  />
+    <siteMapNode url="~/Patients/PatientPhotoUpload.aspx" title="Upload Photo"
+     description="Upload an image for a Patient"  />
+      <siteMapNode url="~/Patients/RBview.aspx" title="RB View"
+     description="View Report on Report Viewer"  />
+    </siteMapNode>
+     <siteMapNode url="~/Rooms/Default.aspx" title="Wards"
+     description="Our Rooms" >
+        <siteMapNode url="~/Rooms/AllocateRoom.aspx" title="Allocate"
+     description="Allocate Room" />
+        <siteMapNode url="~/Rooms/AddRoom.aspx" title="Add"
+     description="Register Room" />
+     <siteMapNode url="~/Rooms/EditRoom.aspx" title="Edit"
+     description="Edit Room" />
+       <siteMapNode url="~/Rooms/RBview.aspx" title="RB View"
+     description="View Report on Report Viewer" />
+       </siteMapNode>
+    <siteMapNode url="~/Appointments/Default.aspx" title="Appointments"
+    description="Appointments available" >
+      <siteMapNode url="~/Appointments/CreateAppointment.aspx" title="Create"
+     description="Create Appointment" />
+      <siteMapNode url="~/Appointments/ViewAppointment.aspx" title="View"
+     description="View Available Appointments" />
+    <siteMapNode url="~/Appointments/EditAppointment.aspx" title="Reschedule"
+     description="Edit Appointments" />
+    <siteMapNode url="~/Appointments/RBview.aspx" title="RB View"
+     description="View Report on Report Viewer" />
+      </siteMapNode>
+    <siteMapNode url="~/Visits/Default.aspx" title="Visits"
+   description="Patients Visits">
+      <siteMapNode url="~/Visits/VisitRegistration.aspx" title="Register"
+      description="Register Patients Visits"/>
+       <siteMapNode url="~/Visits/EditVisit.aspx" title="Edit"
+      description="Edit Patients Visits Information"/>
+    <siteMapNode url="~/Visits/VisitPrescription.aspx" title="Visit Prescription"
+      description="Save Patients Visits Prescriptions"/>
+    <siteMapNode url="~/Visits/ViewPrescription.aspx" title="View Prescriptions"
+      description="View Patients Visits Prescriptions"/>
+    <siteMapNode url="~/Visits/RBview.aspx" title="RB View"
+      description="View Report on Report Viewer"/>
+    </siteMapNode>
+    <siteMapNode url="~/Billing/Default.aspx" title="Billing"
+     description="Billing Home">
+      <siteMapNode url="~/Billing/InPatientBilling.aspx" title="InPatient Billing"
+     description="Bill InPatients"/>
+      <siteMapNode url="~/Billing/OutPatientBilling.aspx" title="OutPatient Billing"
+     description="Bill OutPatient"/>
+    <siteMapNode url="~/Billing/ExportOutBills.aspx" title="Export OutBills"
+     description="Export OutPatients Billing Report"/>
+        </siteMapNode>
+    <siteMapNode url="~/Pharmacy/Default.aspx" title="Pharmacy"
+     description="Pharmacy Home">
+      <siteMapNode url="~/Pharmacy/Inventory.aspx" title="View Inventory"
+   description="view Pharmacy Inventory"/>
+      <siteMapNode url="~/Pharmacy/AddMedicine.aspx" title="Add Medicine"
+   description="Add New Drug/Medicine"/>
+      </siteMapNode>
+    <siteMapNode url="~/Staff/Default.aspx" title="Staff"
+   description="Our Staff">
+      <siteMapNode url="~/Staff/DoctorChoose.aspx" title="Doctor"
+   description="Register Hospital Doctor"/>
+     <siteMapNode url="~/Staff/NurseChoose.aspx" title="Nurse"
+   description="Register Hospital Nurse"/>
+    <siteMapNode url="~/Staff/PharmacistChoose.aspx" title="Pharmacist"
+   description="Register Hospital Pharmacist"/>
+     <siteMapNode url="~/Staff/ReceptionistChoose.aspx" title="Receptionist"
+   description="Register Hospital Pharmacist"/>
+      </siteMapNode>
+    <siteMapNode url="~/Staff/SearchDefault.aspx" title="Search"
+   description="Search Hospital Staff">
+      <siteMapNode url="~/Staff/SearchDoctor.aspx" title="Doctors"
+   description="Search Hospital Doctor"/>
+      <siteMapNode url="~/Staff/SearchNurse.aspx" title="Nurses"
+    description="Search Hospital Nurse"/>
+      <siteMapNode url="~/Staff/SearchPharmacist.aspx" title="Pharmacists"
+     description="Search Hospital Pharmacist"/>
+      <siteMapNode url="~/Staff/SearchReceptionist.aspx" title="Receptionists"
+    description="Search Hospital Pharmacist"/>
+    </siteMapNode>
+     <siteMapNode url="~/Staff/AllStaff.aspx" title="Reports"
+   description="All Hospital Staffs">
+      <siteMapNode url="~/Staff/AllDoctors.aspx" title="Doctors"
+   description="All Hospital Doctors"/>
+      <siteMapNode url="~/Staff/AllNurses.aspx" title="Nurses"
+    description="All Hospital Nurses"/>
+      <siteMapNode url="~/Staff/AllPharmacists.aspx" title="Pharmacists"
+     description="All Hospital Pharmacists"/>
+      <siteMapNode url="~/Staff/AllReceptionists.aspx" title="Receptionists"
+    description="All Hospital Receptionists"/>
+    </siteMapNode>
+    <siteMapNode url="~/Login.aspx" title="Login"
+    description="Log in to this web site" />
+  </siteMapNode>
+</siteMap>
